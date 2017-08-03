@@ -9,25 +9,23 @@ Window {
     visible: true
     width: 640
     height: 240
-    color: "grey"
+    color: "black"
     title: qsTr("dashApp")
 
-//    property int speed: 63
-//    property int rpm: 23
-//    property int tempCooliant: 89
+    property string serialData: ""
+    property variant sourceData: [238,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 
     SerialPort {
         onSerial_dataChanged: {
-            tx.text = "%1".arg(serial_data);
+            serialData = "%1".arg(serial_data);
+            sourceData: serialData.split(',')
         }
     }
 
     Text {
-        id: tx
+        id: speed
         anchors.centerIn: parent
-        fontSizeMode: Text.Fit
-        font.family: "Eurostyle"
-        font.pointSize: 18
+        color: "white"
+        text: toString(sourceData[1])
     }
-
 }
