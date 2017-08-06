@@ -13,19 +13,28 @@ Window {
     title: qsTr("dashApp")
 
     property string serialData: ""
-    property variant sourceData: [238,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,63,2123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 
     SerialPort {
         onSerial_dataChanged: {
-            serialData = "%1".arg(serial_data);
-            sourceData: serialData.split(',')
+            sourceData: "%1".arg(serial_data).split(',')
         }
     }
 
     Text {
-        id: speed
+        id: speedometer
         anchors.centerIn: parent
-        color: "white"
-        text: toString(sourceData[1])
+        color: "turquoise"
+        font.pointSize: 32
+        text: sourceData[1]
+    }
+
+    Text {
+        id: tachometer
+        color: "turquoise"
+        font.pixelSize: 18
+        text: sourceData[2]
+        anchors.horizontalCenter: speedometer.horizontalCenter
+        anchors.top: speedometer.bottom
     }
 }
