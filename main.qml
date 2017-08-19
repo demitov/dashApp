@@ -7,12 +7,11 @@ import RadialBarLib 1.0
 Window {
     id: dash
     visible: true
-    width: 640
-    height: 240
+    width: 1280
+    height: 480
     color: "black"
     title: qsTr("dashApp")
 
-    property string serialData: ""
     property variant sourceData: [238,63,2123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 
     SerialPort {
