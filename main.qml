@@ -24,14 +24,14 @@ Window {
         id: speedometer
         anchors.centerIn: parent
         color: "turquoise"
-        font.pointSize: 32
+        font.pointSize: 48
         text: sourceData[1]
     }
 
     Text {
         id: tachometer
         color: "turquoise"
-        font.pixelSize: 18
+        font.pixelSize: 24
         text: sourceData[2]
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
