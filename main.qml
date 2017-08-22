@@ -7,9 +7,10 @@ import RadialBarLib 1.0
 Window {
     id: dash
     visible: true
+    // Resolution SHARP LQ123K1LG03
     width: 1280
     height: 480
-    color: "black"
+    color: "grey"
     title: qsTr("dashApp")
 
     property variant sourceData: [238,63,2123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
@@ -20,20 +21,16 @@ Window {
         }
     }
 
-    Text {
+    Speedometer {
         id: speedometer
         anchors.centerIn: parent
-        color: "turquoise"
-        font.pointSize: 48
         text: sourceData[1]
     }
 
-    Text {
+    Tachometer {
         id: tachometer
-        color: "turquoise"
-        font.pixelSize: 24
-        text: sourceData[2]
-        anchors.horizontalCenter: speedometer.horizontalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: speedometer.bottom
+        text: sourceData[2]
     }
 }
