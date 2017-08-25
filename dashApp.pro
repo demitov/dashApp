@@ -4,8 +4,7 @@ QT += qml quick serialport
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    serialport.cpp \
-    radialbar.cpp
+    serialport.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,7 +31,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    serialport.h \
-    radialbar.h
+    serialport.h
 
 DISTFILES +=

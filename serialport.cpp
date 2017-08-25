@@ -29,7 +29,7 @@ void SerialPort::onReadData()
         QByteArray data = arduino->readAll();
         qDebug()<<QString(data).trimmed();
         QString value = QString(data).trimmed();
-        bool ok;
+//        bool ok;
 //        double val = value.toDouble(&ok);
 //        if(ok)
 //            set_serial_data(val);
