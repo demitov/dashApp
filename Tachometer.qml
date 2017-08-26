@@ -8,7 +8,6 @@ Item {
     width: rpmDigit.width
     height: rpmDigit.height
 
-
     Text {
         id: rpmDigit
         font.pixelSize: 24

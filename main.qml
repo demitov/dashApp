@@ -20,7 +20,6 @@ Window {
         }
     }
 
-
     Image {
         id: dashboardMask
         source: "./images/DashboardMask.png"
@@ -32,7 +31,6 @@ Window {
         anchors.centerIn: parent
         text: sourceData[1]
     }
-
 
     Tachometer {
         id: tachometer
