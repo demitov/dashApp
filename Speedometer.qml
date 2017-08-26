@@ -10,7 +10,7 @@ Item {
 
     Text {
         id: speedDigit
-        font.pixelSize: 80
+        font.pixelSize: 90
         font.bold: true
         font.family: "Eurostyle"
         color: "white"

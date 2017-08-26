@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>Speedometer.qml</file>
         <file>Tachometer.qml</file>
+        <file>images/DashboardMask.png</file>
     </qresource>
 </RCC>

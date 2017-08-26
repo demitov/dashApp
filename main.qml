@@ -9,7 +9,7 @@ Window {
     // Resolution SHARP LQ123K1LG03
     width: 1280
     height: 480
-    color: "grey"
+    color: "black"
     title: qsTr("dashApp")
 
     property variant sourceData: [238,63,2123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
@@ -20,11 +20,19 @@ Window {
         }
     }
 
+
+    Image {
+        id: dashboardMask
+        source: "./images/DashboardMask.png"
+        anchors.centerIn: parent
+    }
+
     Speedometer {
         id: speedometer
         anchors.centerIn: parent
         text: sourceData[1]
     }
+
 
     Tachometer {
         id: tachometer
