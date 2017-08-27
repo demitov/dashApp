@@ -12,7 +12,7 @@ Window {
     color: "black"
     title: qsTr("dashApp")
 
-    property variant sourceData: [238,63,2123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,63,2123,175321,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 
     SerialPort {
         onSerial_dataChanged: {
@@ -20,10 +20,10 @@ Window {
         }
     }
 
-    Image {
-        id: dashboardMask
-        source: "./images/DashboardMask.png"
+    Tachometer {
+        id: tachometer
         anchors.centerIn: parent
+        rotation: sourceData[2] * 0.04
     }
 
     Speedometer {
@@ -32,10 +32,10 @@ Window {
         text: sourceData[1]
     }
 
-    Tachometer {
-        id: tachometer
-        anchors.horizontalCenter: parent.horizontalCenter
+    Odometer {
+        id: odometer
+        anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
-        text: sourceData[2]
+        text: sourceData[3]
     }
 }
