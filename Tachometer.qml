@@ -3,8 +3,8 @@ import QtQuick 2.8
 Item {
     id: tacho
     property alias rotation: needle.rotation
-    width: 602
-    height: 410
+    width: 604
+    height: 424
     anchors.centerIn: parent
 
     Image {
