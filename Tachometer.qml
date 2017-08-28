@@ -2,7 +2,7 @@ import QtQuick 2.8
 
 Item {
     id: tacho
-    property alias rotation: needle.rotation
+    property alias rpm: needleRotation.angle
     width: 604
     height: 424
     anchors.centerIn: parent
@@ -18,7 +18,11 @@ Item {
         source: "./images/Needle.png"
         x: (parent.width / 2) - 5
         y: parent.height / 2
-        transformOrigin: Item.Top
+        transform: Rotation {
+            id: needleRotation
+            origin.x: 5
+            origin.y: 0
+        }
         smooth: true
     }
 }

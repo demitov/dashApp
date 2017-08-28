@@ -3,7 +3,7 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: odometer
-    property alias text : odoDigit.text
+    property alias mileage : odoDigit.text
 
     width: odoDigit.width
     height: odoDigit.height

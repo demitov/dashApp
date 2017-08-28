@@ -24,19 +24,19 @@ Window {
     Tachometer {
         id: tachometer
         anchors.centerIn: parent
-        rotation: sourceData[2] * 0.04
+        rpm: sourceData[2] * 0.04
     }
 
     Speedometer {
         id: speedometer
         anchors.centerIn: parent
-        text: sourceData[1]
+        speed: sourceData[1]
     }
 
     Odometer {
         id: odometer
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
-        text: sourceData[3]
+        mileage: sourceData[3]
     }
 }

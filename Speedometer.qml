@@ -3,7 +3,7 @@ import QtGraphicalEffects 1.0
 
 Item {
     id: speedometer
-    property alias text: speedDigit.text
+    property alias speed: speedDigit.text
 
     width: speedDigit.width
     height: speedDigit.height
