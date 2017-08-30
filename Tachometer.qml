@@ -4,7 +4,7 @@ Item {
     id: tacho
     property alias rpm: needleRotation.angle
     width: 604
-    height: 424
+    height: 405
     anchors.centerIn: parent
 
     Image {
