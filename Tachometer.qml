@@ -7,11 +7,11 @@ Item {
     height: 405
     anchors.centerIn: parent
 
-    Image {
-        id: tachoMask
-        source: "./images/Tacho.png"
-        anchors.centerIn: parent
-    }
+//    Image {
+//        id: tachoMask
+//        source: "./images/Tacho.png"
+//        anchors.centerIn: parent
+//    }
 
     Image {
         id: needle

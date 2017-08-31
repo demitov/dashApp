@@ -4,7 +4,7 @@
         <file>Speedometer.qml</file>
         <file>Tachometer.qml</file>
         <file>images/Needle.png</file>
-        <file>images/Tacho.png</file>
         <file>Odometer.qml</file>
+        <file>images/DashMask.png</file>
     </qresource>
 </RCC>

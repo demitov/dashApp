@@ -21,6 +21,13 @@ Window {
         }
     }
 
+    // DashMask
+    Image {
+        id: dashMask
+        source: "./images/DashMask.png"
+        anchors.centerIn: parent
+    }
+
     Tachometer {
         id: tachometer
         anchors.centerIn: parent
