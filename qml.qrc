@@ -6,5 +6,7 @@
         <file>images/Needle.png</file>
         <file>Odometer.qml</file>
         <file>images/DashMask.png</file>
+        <file>icons/TurnLeft.png</file>
+        <file>icons/TurnRight.png</file>
     </qresource>
 </RCC>

@@ -46,4 +46,20 @@ Window {
         anchors.top: speedometer.bottom
         mileage: sourceData[3]
     }
+
+    // in progress
+    Image {
+        id: turnLeft
+        x: 470
+        y: 40
+        source: "./icons/TurnLeft.png"
+        visible: true
+    }
+    Image {
+        id: turnRight
+        x: 795
+        y: 40
+        source: "./icons/TurnRight.png"
+        visible: true
+    }
 }
