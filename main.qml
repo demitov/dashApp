@@ -62,4 +62,11 @@ Window {
         source: "./icons/TurnRight.png"
         visible: true
     }
+    Image {
+        id: checkEngine
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 128
+        source: "./icons/CheckEngine.png"
+        visible: true
+    }
 }

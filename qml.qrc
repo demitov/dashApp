@@ -8,5 +8,6 @@
         <file>images/DashMask.png</file>
         <file>icons/TurnLeft.png</file>
         <file>icons/TurnRight.png</file>
+        <file>icons/CheckEngine.png</file>
     </qresource>
 </RCC>
