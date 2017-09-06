@@ -9,5 +9,6 @@
         <file>icons/TurnLeft.png</file>
         <file>icons/TurnRight.png</file>
         <file>icons/CheckEngine.png</file>
+        <file>icons/Battery.png</file>
     </qresource>
 </RCC>

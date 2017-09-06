@@ -47,7 +47,7 @@ Window {
         mileage: sourceData[3]
     }
 
-    // in progress
+    // in progress icons
     Image {
         id: turnLeft
         x: 470
@@ -64,9 +64,14 @@ Window {
     }
     Image {
         id: checkEngine
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 128
+        x: 10
+        y: 67
         source: "./icons/CheckEngine.png"
+        visible: true
+    }
+    Image {
+        id: batteryLow
+        source: "./icons/Battery.png"
         visible: true
     }
 }
