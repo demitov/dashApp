@@ -6,9 +6,8 @@ import SerialPortLib 1.0
 Window {
     id: dash
     visible: true
-    // Resolution SHARP LQ123K1LG03
-    width: 1280
-    height: 480
+    width: 1920
+    height: 720
     color: "grey"
     title: qsTr("dashApp")
 
@@ -50,14 +49,14 @@ Window {
     // in progress icons
     Image {
         id: turnLeft
-        x: 470
+        x: 780
         y: 40
         source: "./icons/TurnLeft.png"
         visible: true
     }
     Image {
         id: turnRight
-        x: 795
+        x: 1105
         y: 40
         source: "./icons/TurnRight.png"
         visible: true
