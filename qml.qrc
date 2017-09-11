@@ -10,5 +10,6 @@
         <file>icons/TurnRight.png</file>
         <file>icons/CheckEngine.png</file>
         <file>icons/Battery.png</file>
+        <file>ProgressBar.qml</file>
     </qresource>
 </RCC>

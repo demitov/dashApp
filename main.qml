@@ -20,6 +20,27 @@ Window {
         }
     }
 
+    // Coolant temp
+    ProgressBar{
+        id: coolantTemp
+
+        x: 365
+        y: 92
+
+        //
+    }
+
+    // Fuel level
+    ProgressBar{
+        id: fuelLevel
+
+        x: 870
+        y: 92
+
+        //
+
+    }
+
     // DashMask
     Image {
         id: dashMask
