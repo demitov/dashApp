@@ -6,8 +6,8 @@ import SerialPortLib 1.0
 Window {
     id: dash
     visible: true
-    width: 1920
-    height: 720
+    width: 1280
+    height: 480
     color: "grey"
     title: qsTr("dashApp")
 
@@ -49,14 +49,14 @@ Window {
     // in progress icons
     Image {
         id: turnLeft
-        x: 780
+        x: 468
         y: 40
         source: "./icons/TurnLeft.png"
         visible: true
     }
     Image {
         id: turnRight
-        x: 1105
+        x: 794
         y: 40
         source: "./icons/TurnRight.png"
         visible: true
