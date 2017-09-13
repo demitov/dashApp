@@ -86,13 +86,12 @@ Window {
     }
     Image {
         id: checkEngine
-        x: 10
-        y: 67
         source: "./icons/CheckEngine.png"
         visible: true
     }
     Image {
         id: batteryLow
+        anchors.top: checkEngine.bottom
         source: "./icons/Battery.png"
         visible: true
     }
