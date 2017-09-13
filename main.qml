@@ -24,10 +24,12 @@ Window {
     ProgressBar{
         id: coolantTemp
 
-        x: 365
+        x: 364
         y: 92
+        visible: true
 
         //
+        scale_value: 144
     }
 
     // Fuel level
@@ -38,7 +40,7 @@ Window {
         y: 92
 
         //
-
+        scale_value: 144.7
     }
 
     // DashMask
