@@ -11,7 +11,7 @@ Window {
     color: "grey"
     title: qsTr("dashApp")
 
-    property variant sourceData: [238,63,2123,175321,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,63,2123,175321.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 
     // get the data from the serial port and put it into an array sourceData
     SerialPort {
@@ -25,7 +25,7 @@ Window {
         id: coolantTemp
 
         x: 364
-        y: 92
+        y: 93
         visible: true
 
         //
@@ -37,7 +37,7 @@ Window {
         id: fuelLevel
 
         x: 870
-        y: 92
+        y: 93
 
         //
         scale_value: 144.7
