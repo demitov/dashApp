@@ -40,7 +40,7 @@ Window {
         y: 93
 
         //
-        scale_value: 144.7
+        scale_value: 144
     }
 
     // DashMask
