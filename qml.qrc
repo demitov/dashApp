@@ -11,5 +11,6 @@
         <file>icons/CheckEngine.png</file>
         <file>icons/Battery.png</file>
         <file>ProgressBar.qml</file>
+        <file>icons/ABS.png</file>
     </qresource>
 </RCC>

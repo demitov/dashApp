@@ -95,4 +95,10 @@ Window {
         source: "./icons/Battery.png"
         visible: true
     }
+    Image {
+        id: absError
+        source: "./icons/ABS.png"
+        anchors.top: batteryLow.bottom
+        visible: true
+    }
 }
