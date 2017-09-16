@@ -12,5 +12,6 @@
         <file>icons/Battery.png</file>
         <file>ProgressBar.qml</file>
         <file>icons/ABS.png</file>
+        <file>icons/BrakeWarning.png</file>
     </qresource>
 </RCC>

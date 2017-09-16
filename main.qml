@@ -101,4 +101,10 @@ Window {
         anchors.top: batteryLow.bottom
         visible: true
     }
+    Image {
+        id: brakeWarning
+        source: "./icons/BrakeWarning.png"
+        anchors.top: absError.bottom
+        visible: true
+    }
 }
