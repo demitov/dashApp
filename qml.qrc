@@ -13,5 +13,6 @@
         <file>ProgressBar.qml</file>
         <file>icons/ABS.png</file>
         <file>icons/BrakeWarning.png</file>
+        <file>icons/OilPressureLow.png</file>
     </qresource>
 </RCC>

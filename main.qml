@@ -107,4 +107,10 @@ Window {
         anchors.top: absError.bottom
         visible: true
     }
+    Image {
+        id: oilPressureLow
+        source: "./icons/OilPressureLow.png"
+        anchors.top: brakeWarning.bottom
+        visible: true
+    }
 }
