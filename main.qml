@@ -29,7 +29,7 @@ Window {
         visible: true
 
         //
-        scale_value: 144
+        scale_value: 100
     }
 
     // Fuel level
