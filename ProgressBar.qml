@@ -15,7 +15,6 @@ Item{
         border.width: 0
         color: "white"
         anchors.bottom: parent.bottom
-        rotation: 180
 
     }
 }
