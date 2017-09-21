@@ -14,5 +14,7 @@
         <file>icons/ABS.png</file>
         <file>icons/BrakeWarning.png</file>
         <file>icons/OilPressureLow.png</file>
+        <file>icons/DoorAjar.png</file>
+        <file>icons/TrunkLidAjar.png</file>
     </qresource>
 </RCC>

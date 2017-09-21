@@ -113,4 +113,16 @@ Window {
         anchors.top: brakeWarning.bottom
         visible: true
     }
+    Image {
+        id: doorAjar
+        source: "./icons/DoorAjar.png"
+        anchors.top: oilPressureLow.bottom
+        visible: true
+    }
+    Image {
+        id: trunkLidAjar
+        source: "./icons/TrunkLidAjar.png"
+        anchors.top: doorAjar.bottom
+        visible: true
+    }
 }
