@@ -7,13 +7,15 @@ Item{
 
 
     width: 60
+    height: 145
 
     Rectangle {
         id: valueBar
-        rotation: 180
         width: parent.width
         border.width: 0
         color: "white"
+        anchors.bottom: parent.bottom
+        rotation: 180
 
     }
 }
