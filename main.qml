@@ -116,19 +116,29 @@ Window {
     Image {
         id: doorAjar
         source: "./icons/DoorAjar.png"
-        anchors.top: oilPressureLow.bottom
+        anchors.top: parent.top
+        anchors.left: oilPressureLow.right
         visible: true
     }
     Image {
         id: trunkLidAjar
         source: "./icons/TrunkLidAjar.png"
         anchors.top: doorAjar.bottom
+        anchors.left: doorAjar.left
         visible: true
     }
     Image {
         id: seatBelt
         source: "./icons/SeatBelt.png"
         anchors.top: trunkLidAjar.bottom
+        anchors.left: trunkLidAjar.left
+        visible: true
+    }
+    Image {
+        id: airBag
+        source: "./icons/AirBag.png"
+        anchors.top: seatBelt.bottom
+        anchors.left: seatBelt.left
         visible: true
     }
 }
