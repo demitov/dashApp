@@ -125,4 +125,10 @@ Window {
         anchors.top: doorAjar.bottom
         visible: true
     }
+    Image {
+        id: seatBelt
+        source: "./icons/SeatBelt.png"
+        anchors.top: trunkLidAjar.bottom
+        visible: true
+    }
 }

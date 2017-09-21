@@ -16,5 +16,6 @@
         <file>icons/OilPressureLow.png</file>
         <file>icons/DoorAjar.png</file>
         <file>icons/TrunkLidAjar.png</file>
+        <file>icons/SeatBelt.png</file>
     </qresource>
 </RCC>
