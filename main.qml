@@ -141,4 +141,11 @@ Window {
         anchors.left: seatBelt.left
         visible: true
     }
+    Image {
+        id: highBeam
+        source: "./icons/HighBeam.png"
+        anchors.top: airBag.bottom
+        anchors.left: airBag.left
+        visible: true
+    }
 }

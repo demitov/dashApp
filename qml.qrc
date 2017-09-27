@@ -18,5 +18,6 @@
         <file>icons/TrunkLidAjar.png</file>
         <file>icons/SeatBelt.png</file>
         <file>icons/AirBag.png</file>
+        <file>icons/HighBeam.png</file>
     </qresource>
 </RCC>
