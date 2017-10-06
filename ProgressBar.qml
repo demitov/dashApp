@@ -1,4 +1,4 @@
-import QtQuick 2.8
+import QtQuick 2.9
 
 Item{
     id: progressBar

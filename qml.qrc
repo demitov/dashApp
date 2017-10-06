@@ -19,5 +19,7 @@
         <file>icons/SeatBelt.png</file>
         <file>icons/AirBag.png</file>
         <file>icons/HighBeam.png</file>
+        <file>Icons.qml</file>
+        <file>icons/Immobilizer.png</file>
     </qresource>
 </RCC>
