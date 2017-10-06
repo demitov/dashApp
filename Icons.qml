@@ -86,4 +86,11 @@ Item {
         anchors.left: doorAjar.right
         visible: true
     }
+    Image {
+        id: frontFog
+        source: "./icons/FrontFog.png"
+        anchors.top: immobilizer.bottom
+        anchors.left: immobilizer.left
+        visible: true
+    }
 }

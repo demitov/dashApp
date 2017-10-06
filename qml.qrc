@@ -21,5 +21,6 @@
         <file>icons/HighBeam.png</file>
         <file>Icons.qml</file>
         <file>icons/Immobilizer.png</file>
+        <file>icons/FrontFog.png</file>
     </qresource>
 </RCC>
