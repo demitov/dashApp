@@ -22,5 +22,6 @@
         <file>Icons.qml</file>
         <file>icons/Immobilizer.png</file>
         <file>icons/FrontFog.png</file>
+        <file>Clock.qml</file>
     </qresource>
 </RCC>

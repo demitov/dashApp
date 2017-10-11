@@ -50,6 +50,12 @@ Window {
         anchors.centerIn: parent
     }
 
+    // Clock
+    Clock {
+        x: 400
+        y: 370
+    }
+
     Tachometer {
         id: tachometer
         anchors.centerIn: parent
