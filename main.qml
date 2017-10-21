@@ -24,8 +24,8 @@ Window {
     ProgressBar{
         id: coolantTemp
 
-        x: 364
-        y: 93
+        x: 357
+        y: 95
         visible: true
 
         //
@@ -36,8 +36,8 @@ Window {
     ProgressBar{
         id: fuelLevel
 
-        x: 870
-        y: 93
+        x: 862
+        y: 95
 
         //
         scale_value: 144
