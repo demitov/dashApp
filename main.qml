@@ -11,7 +11,22 @@ Window {
     color: "grey"
     title: qsTr("dashApp")
 
-    property variant sourceData: [238,63,2123,175321.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,63,2123,13.7,0,0,175321.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+
+    //массив sourceData получаемый от Arduino
+    /*
+    1   скорость
+    2   обороты двигателя
+    3   напряжение бортовой сети
+    4   уровень топлива
+    5   температура ОЖ
+    6   одометр 3-й байт
+    7   одометр 2-й байт
+    8   одометр 1-й байт
+    9   одометр 0-й байт
+    ...
+    */
+
 
     // get the data from the serial port and put it into an array sourceData
     SerialPort {
@@ -56,6 +71,13 @@ Window {
         y: 370
     }
 
+    Voltmeter{
+        id: voltmeter
+        x: 839
+        y: 370
+        voltage: sourceData[3]
+    }
+
     Tachometer {
         id: tachometer
         anchors.centerIn: parent
@@ -72,7 +94,7 @@ Window {
         id: odometer
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
-        mileage: sourceData[3]
+        mileage: sourceData[6]
     }
 
     Icons{
