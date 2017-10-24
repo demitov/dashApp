@@ -11,7 +11,7 @@ Window {
     color: "grey"
     title: qsTr("dashApp")
 
-    property variant sourceData: [238,63,2123,13.7,0,0,175321.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,63,2123,13.7,0,90,175321.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 
     //массив sourceData получаемый от Arduino
     /*
@@ -44,7 +44,7 @@ Window {
         visible: true
 
         //
-        scale_value: 100
+        scale_value: sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 2
     }
 
     // Fuel level
