@@ -33,4 +33,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     serialport.h
 
-DISTFILES +=
+DISTFILES += \
+    arduino/ArduinoPins.txt \
+    arduino/ArduinoSketch.txt
