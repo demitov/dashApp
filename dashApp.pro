@@ -35,4 +35,6 @@ HEADERS += \
 
 DISTFILES += \
     arduino/ArduinoPins.txt \
-    arduino/ArduinoSketch.txt
+    arduino/ArduinoSketch.txt \
+    arduino/ArduinoPacketFormat.jpg \
+    arduino/SchematicDiagramMega.pdf
