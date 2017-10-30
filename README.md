@@ -1,2 +1,2 @@
 # dashApp
-Automotive dashboard on Qt
+Automotive digital dashboard on Qt for Hyundai Elantra XD GLS
