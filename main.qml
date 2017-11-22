@@ -59,9 +59,13 @@ Window {
     }
 
     // DashMask
-    Image {
-        id: dashMask
-        source: "./images/DashMask.png"
+//    Image {
+//        id: dashMask
+//        source: "./images/DashMask.png"
+//        anchors.centerIn: parent
+//    }
+
+    DashMask {
         anchors.centerIn: parent
     }
 

@@ -24,5 +24,6 @@
         <file>icons/FrontFog.png</file>
         <file>Clock.qml</file>
         <file>Voltmeter.qml</file>
+        <file>DashMask.qml</file>
     </qresource>
 </RCC>
