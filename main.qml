@@ -4,10 +4,10 @@ import QtQuick.Window 2.2
 import SerialPortLib 1.0
 
 Window {
-    id: dash
+    id: main
     visible: true
-    width: 1280
-    height: 480
+    width: 960
+    height: 720
     color: "grey"
     title: qsTr("dashApp")
 
@@ -35,73 +35,7 @@ Window {
         }
     }
 
-    // Coolant temp
-    ProgressBar{
-        id: coolantTemp
-
-        x: 357
-        y: 95
-        visible: true
-
-        //
-        scale_value: sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 2
-    }
-
-    // Fuel level
-    ProgressBar{
-        id: fuelLevel
-
-        x: 862
-        y: 95
-
-        //
-        scale_value: 144
-    }
-
-    // DashMask
-//    Image {
-//        id: dashMask
-//        source: "./images/DashMask.png"
-//        anchors.centerIn: parent
-//    }
-
-    DashMask {
+    Dash {
         anchors.centerIn: parent
-    }
-
-    // Clock
-    Clock {
-        x: 400
-        y: 370
-    }
-
-    Voltmeter{
-        id: voltmeter
-        x: 839
-        y: 370
-        voltage: sourceData[3]
-    }
-
-    Tachometer {
-        id: tachometer
-        anchors.centerIn: parent
-        rpm: sourceData[2] * 0.04
-    }
-
-    Speedometer {
-        id: speedometer
-        anchors.centerIn: parent
-        speed: sourceData[1]
-    }
-
-    Odometer {
-        id: odometer
-        anchors.horizontalCenter: speedometer.horizontalCenter
-        anchors.top: speedometer.bottom
-        mileage: sourceData[6]
-    }
-
-    Icons{
-        // in progress icons
     }
 }

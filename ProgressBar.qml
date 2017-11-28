@@ -5,8 +5,8 @@ Item{
 
     property alias scale_value: valueBar.height
 
-    width: 60
-    height: 145
+    width: 90
+    height: 220
 
     Rectangle {
         id: valueBar

@@ -25,5 +25,6 @@
         <file>Clock.qml</file>
         <file>Voltmeter.qml</file>
         <file>DashMask.qml</file>
+        <file>Dash.qml</file>
     </qresource>
 </RCC>
