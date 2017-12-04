@@ -1,12 +1,12 @@
 import QtQuick 2.9
-import QtQuick.Window 2.2
+import QtQuick.Window 2.3
 
 import SerialPortLib 1.0
 
 Window {
     id: main
     visible: true
-    width: 960
+    width: 1200
     height: 720
     color: "grey"
     title: qsTr("dashApp")
