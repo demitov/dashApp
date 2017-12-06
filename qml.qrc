@@ -1,10 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Speedometer.qml</file>
         <file>Tachometer.qml</file>
         <file>images/Needle.png</file>
-        <file>Odometer.qml</file>
         <file>images/DashMask.png</file>
         <file>icons/TurnLeft.png</file>
         <file>icons/TurnRight.png</file>
@@ -23,8 +21,8 @@
         <file>icons/Immobilizer.png</file>
         <file>icons/FrontFog.png</file>
         <file>Clock.qml</file>
-        <file>Voltmeter.qml</file>
         <file>DashMask.qml</file>
         <file>Dash.qml</file>
+        <file>Inscription.qml</file>
     </qresource>
 </RCC>

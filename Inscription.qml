@@ -2,15 +2,14 @@ import QtQuick 2.9
 import QtGraphicalEffects 1.0
 
 Item {
-    id: speedometer
-    property alias speed: speedDigit.text
+    property alias text: inscriptionText.text
+    property alias size: inscriptionText.font.pixelSize
 
-    width: speedDigit.width
-    height: speedDigit.height
+    width: inscriptionText.width
+    height: inscriptionText.height
 
     Text {
-        id: speedDigit
-        font.pixelSize: 90
+        id: inscriptionText
         font.bold: true
         font.family: "Eurostyle"
         color: "white"
@@ -19,12 +18,12 @@ Item {
 
     DropShadow {
         id: dropShadow
-        anchors.fill: speedDigit
+        anchors.fill: inscriptionText
         horizontalOffset: 2
         verticalOffset: 6
-        radius: 4.0
+        radius: 6
         samples: 16
-        color: "black"
-        source: speedDigit
+        color: "grey"
+        source: inscriptionText
     }
 }

@@ -8,11 +8,9 @@ Item {
     // Coolant temp
     ProgressBar{
         id: coolantTemp
-
         x: 56
         y: 140
         visible: true
-
         //
         scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 2
     }
@@ -20,10 +18,8 @@ Item {
     // Fuel level
     ProgressBar{
         id: fuelLevel
-
         x: 814
         y: 140
-
         //
         scale_value: 144
     }
@@ -45,12 +41,14 @@ Item {
 //        y: 370
 //    }
 //
-//    Voltmeter{
-//        id: voltmeter
-//        x: 839
-//        y: 370
-//        voltage: main.sourceData[3]
-//    }
+
+    Inscription {
+        id: voltmeter
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        text: main.sourceData[3]
+        size: 20
+    }
 
     Tachometer {
         id: tachometer
@@ -58,17 +56,21 @@ Item {
         rpm: main.sourceData[2] * 0.04
     }
 
-    Speedometer {
+    // Speedometer
+    Inscription {
         id: speedometer
         anchors.centerIn: parent
-        speed: main.sourceData[1]
+        text: main.sourceData[1]
+        size: 90
     }
 
-    Odometer {
+    // Odometer
+    Inscription {
         id: odometer
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
-        mileage: main.sourceData[6]
+        text: main.sourceData[6]
+        size: 22
     }
 
     //    Icons{

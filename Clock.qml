@@ -37,7 +37,7 @@ Item {
         verticalOffset: 4
         radius: 2.0
         samples: 16
-        color: "black"
+        color: "grey"
         source: clockDigit
     }
 }
