@@ -15,11 +15,8 @@ SerialPort::~SerialPort()
 
 void SerialPort::set_serial_data(QString newValue)
 {
-    if (mserial_data == newValue)
-        return;
-
-    mserial_data = newValue;
-    emit serial_data_Changed(mserial_data);
+    mSerial_data = newValue;
+    emit serial_data_Changed(mSerial_data);
 }
 
 void SerialPort::onReadData()
@@ -29,10 +26,7 @@ void SerialPort::onReadData()
         QByteArray data = arduino->readAll();
         qDebug()<<QString(data).trimmed();
         QString value = QString(data).trimmed();
-//        bool ok;
-//        double val = value.toDouble(&ok);
-//        if(ok)
-//            set_serial_data(val);
+        set_serial_data(value);
     }
 }
 
@@ -40,7 +34,7 @@ void SerialPort::openDefault()
 {
     for(auto info: QSerialPortInfo::availablePorts()){
         qDebug()<<info.portName()<<info.description()<<info.manufacturer();
-        if(!info.isBusy() && (info.description().contains("Arduino") || info.manufacturer().contains("Arduino"))){
+        if(!info.isBusy() && (info.description().contains("FabulaTech Virtual Serial Port") || info.manufacturer().contains("Arduino"))){
             portInfo = info;
             break;
         }
@@ -66,5 +60,5 @@ void SerialPort::openDefault()
 
 QString SerialPort::get_serial_data() const
 {
-    return mserial_data;
+    return mSerial_data;
 }

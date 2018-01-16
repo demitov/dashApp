@@ -12,7 +12,7 @@ Item {
         y: 140
         visible: true
         //
-        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 2
+        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 3
     }
 
     // Fuel level
@@ -46,7 +46,7 @@ Item {
         id: voltmeter
         anchors.left: parent.left
         anchors.bottom: parent.bottom
-        text: main.sourceData[3]
+        text: String(main.sourceData[3])
         size: 20
     }
 
@@ -60,7 +60,7 @@ Item {
     Inscription {
         id: speedometer
         anchors.centerIn: parent
-        text: main.sourceData[1]
+        text: String(main.sourceData[1])
         size: 90
     }
 
@@ -69,7 +69,7 @@ Item {
         id: odometer
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
-        text: main.sourceData[6]
+        text: String(main.sourceData[6])
         size: 22
     }
 
