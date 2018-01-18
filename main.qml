@@ -5,9 +5,10 @@ import SerialPortLib 1.0
 
 Window {
     id: main
-    visible: true
-    width: 1200
-    height: 720
+//    visible: true
+//    visibility: Window.FullScreen
+        width: 1200
+        height: 720
     color: "grey"
     title: qsTr("dashApp")
 
@@ -21,10 +22,7 @@ Window {
     3   напряжение бортовой сети
     4   уровень топлива
     5   температура ОЖ
-    6   одометр 3-й байт
-    7   одометр 2-й байт
-    8   одометр 1-й байт
-    9   одометр 0-й байт
+    6   показания одометра
     ...
     */
 
