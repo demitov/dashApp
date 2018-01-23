@@ -34,7 +34,7 @@ void SerialPort::openDefault()
 {
     for(auto info: QSerialPortInfo::availablePorts()){
         qDebug()<<info.portName()<<info.description()<<info.manufacturer();
-        if(!info.isBusy() && (info.description().contains("FabulaTech Virtual Serial Port") || info.manufacturer().contains("Arduino"))){
+        if(!info.isBusy() && (info.description().contains("Virtual Serial Port") || info.manufacturer().contains("Arduino"))){
             portInfo = info;
             break;
         }

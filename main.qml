@@ -5,15 +5,15 @@ import SerialPortLib 1.0
 
 Window {
     id: main
-//    visible: true
+    visible: true
 //    visibility: Window.FullScreen
-        width: 1200
-        height: 720
+    width: 960
+    height: 660
     color: "grey"
     title: qsTr("dashApp")
 
     property string serial_data : ""
-    property variant sourceData: []
+    property variant sourceData: [238,63,2123,13.7,15,90,175751]
 
     //массив sourceData получаемый от Arduino
     /*

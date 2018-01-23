@@ -2,6 +2,8 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
+// data from serial port get from here
+// https://github.com/eyllanesc/stackoverflow/tree/master/Arduino-QML
 #include "serialport.h"
 
 int main(int argc, char *argv[])

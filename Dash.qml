@@ -3,7 +3,7 @@ import QtQuick 2.9
 Item {
     id: dash
     width: 960
-    height: 720
+    height: 660
 
     // Coolant temp
     ProgressBar{
@@ -13,6 +13,7 @@ Item {
         visible: true
         //
         scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 3
+        color: main.sourceData[5] >110 ? "red" : "white"
     }
 
     // Fuel level
@@ -22,6 +23,7 @@ Item {
         y: 140
         //
         scale_value: 144
+        color: "white"
     }
 
     // DashMask
