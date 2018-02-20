@@ -3,7 +3,6 @@
 
 #include <QObject>
 #include <QSerialPort>
-#include <QSerialPortInfo>
 
 class SerialPort : public QObject
 {
@@ -29,8 +28,6 @@ private:
     static const quint16 arduino_uno_product_id = 0x0001;
 
     QString mSerial_data;
-
-    QSerialPortInfo portInfo;
 
     void openDefault();
 };

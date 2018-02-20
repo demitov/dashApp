@@ -38,16 +38,17 @@ Item {
 //    }
 
     // Clock
-//    Clock {
-//        x: 400
-//        y: 370
-//    }
-//
+    Clock {
+        id: clock
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+    }
 
+    // Voltmeter
     Inscription {
         id: voltmeter
         anchors.left: parent.left
-        anchors.bottom: parent.bottom
+        anchors.bottom: clock.top
         text: String(main.sourceData[3])
         size: 20
     }
@@ -63,7 +64,7 @@ Item {
         id: speedometer
         anchors.centerIn: parent
         text: String(main.sourceData[1])
-        size: 90
+        size: 200
     }
 
     // Odometer
@@ -72,7 +73,7 @@ Item {
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
         text: String(main.sourceData[6])
-        size: 22
+        size: 42
     }
 
     //    Icons{

@@ -21,9 +21,9 @@ void SerialPort::set_serial_data(QString newValue)
 
 void SerialPort::onReadData()
 {
-    if(arduino->bytesAvailable()>0){
+    if(arduino->canReadLine()){
 
-        QByteArray data = arduino->readAll();
+        QByteArray data = arduino->readLine();
         qDebug()<<QString(data).trimmed();
         QString value = QString(data).trimmed();
         set_serial_data(value);
@@ -32,19 +32,7 @@ void SerialPort::onReadData()
 
 void SerialPort::openDefault()
 {
-    for(auto info: QSerialPortInfo::availablePorts()){
-        qDebug()<<info.portName()<<info.description()<<info.manufacturer();
-        if(!info.isBusy() && (info.description().contains("Virtual Serial Port") || info.manufacturer().contains("Arduino"))){
-            portInfo = info;
-            break;
-        }
-    }
-
-    if(portInfo.isNull()){
-        return;
-    }
-
-    arduino->setPortName(portInfo.portName());
+    arduino->setPortName("ttyAMA0");
     arduino->setBaudRate(QSerialPort::Baud115200);
     arduino->setDataBits(QSerialPort::Data8);
     arduino->setParity(QSerialPort::NoParity);
@@ -52,7 +40,7 @@ void SerialPort::openDefault()
     arduino->setFlowControl(QSerialPort::NoFlowControl);
 
     if(arduino->open(QSerialPort::ReadWrite))
-        qDebug()<<"Connected to "<< portInfo.manufacturer()<< " on " << portInfo.portName();
+        qDebug()<<"Connected to "<< arduino->portName();
     else
         qCritical()<<"Serial Port error: " << arduino->errorString();
 

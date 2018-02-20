@@ -20,7 +20,7 @@ Item {
         id: dropShadow
         anchors.fill: inscriptionText
         horizontalOffset: 2
-        verticalOffset: 6
+        verticalOffset: 5
         radius: 6
         samples: 16
         color: "grey"

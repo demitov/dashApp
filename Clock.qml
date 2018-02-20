@@ -34,7 +34,7 @@ Item {
     DropShadow {
         anchors.fill: clockDigit
         horizontalOffset: 1
-        verticalOffset: 4
+        verticalOffset: 3
         radius: 2.0
         samples: 16
         color: "grey"

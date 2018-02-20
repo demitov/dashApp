@@ -13,7 +13,7 @@ Window {
     title: qsTr("dashApp")
 
     property string serial_data : ""
-    property variant sourceData: [238,63,2123,13.7,15,90,175751]
+    property variant sourceData: [238,63,2123,0,0,0,175571]
 
     //массив sourceData получаемый от Arduino
     /*
