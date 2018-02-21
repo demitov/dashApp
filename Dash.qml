@@ -2,14 +2,14 @@ import QtQuick 2.9
 
 Item {
     id: dash
-    width: 960
-    height: 660
+    width: 1280
+    height: 480
 
     // Coolant temp
     ProgressBar{
         id: coolantTemp
-        x: 56
-        y: 140
+        x: 355
+        y: 88
         visible: true
         //
         scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 3
@@ -19,10 +19,10 @@ Item {
     // Fuel level
     ProgressBar{
         id: fuelLevel
-        x: 814
-        y: 140
+        x: 865
+        y: 88
         //
-        scale_value: 144
+        scale_value: 111
         color: "white"
     }
 
@@ -64,7 +64,7 @@ Item {
         id: speedometer
         anchors.centerIn: parent
         text: String(main.sourceData[1])
-        size: 200
+        size: 160
     }
 
     // Odometer
@@ -73,7 +73,7 @@ Item {
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
         text: String(main.sourceData[6])
-        size: 42
+        size: 30
     }
 
     //    Icons{
