@@ -1,16 +1,19 @@
 import QtQuick 2.9
 
 Item {
+    width: 320
+    height: 480
+
     Image {
         id: turnLeft
-        x: 468
+        x: 200
         y: 40
         source: "./icons/TurnLeft.png"
         visible: true
     }
     Image {
         id: turnRight
-        x: 794
+        x: 250
         y: 40
         source: "./icons/TurnRight.png"
         visible: true

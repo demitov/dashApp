@@ -37,4 +37,5 @@ DISTFILES += \
     arduino/ArduinoPins.txt \
     arduino/ArduinoSketch.txt \
     arduino/ArduinoPacketFormat.jpg \
-    arduino/SchematicDiagramMega.pdf
+    arduino/SchematicDiagramMega.pdf \
+    arduino/sensors.txt

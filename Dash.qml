@@ -2,25 +2,25 @@ import QtQuick 2.9
 
 Item {
     id: dash
-    width: 1280
+    width: 640
     height: 480
 
     // Coolant temp
     ProgressBar{
         id: coolantTemp
-        x: 355
-        y: 88
+        x: 30
+        y: 90
         visible: true
         //
-        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 3
+        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
         color: main.sourceData[5] >110 ? "red" : "white"
     }
 
     // Fuel level
     ProgressBar{
         id: fuelLevel
-        x: 865
-        y: 88
+        x: 540
+        y: 90
         //
         scale_value: 111
         color: "white"
@@ -75,8 +75,4 @@ Item {
         text: String(main.sourceData[6])
         size: 30
     }
-
-    //    Icons{
-    //        // in progress icons
-    //    }
 }
