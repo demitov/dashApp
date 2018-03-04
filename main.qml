@@ -26,14 +26,6 @@ Window {
     ...
     */
 
-
-    // get the data from the serial port and put it into an array sourceData
-    SerialPort {
-        onSerial_data_Changed: {
-            sourceData = "%1".arg(serial_data).split(',')
-        }
-    }
-
     Dash {
         anchors.centerIn: parent
     }
@@ -42,5 +34,12 @@ Window {
         // in progress icons
         anchors.left: parent.left
         anchors.top: parent.top
+    }
+
+    // get the data from the serial port and put it into an array sourceData
+    SerialPort {
+        onSerial_data_Changed: {
+            sourceData = "%1".arg(serial_data).split(',')
+        }
     }
 }
