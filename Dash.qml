@@ -64,7 +64,7 @@ Item {
         id: speedometer
         anchors.centerIn: parent
         text: String(main.sourceData[1])
-        size: 160
+        size: 140
     }
 
     // Odometer
@@ -73,6 +73,6 @@ Item {
         anchors.horizontalCenter: speedometer.horizontalCenter
         anchors.top: speedometer.bottom
         text: String(main.sourceData[6])
-        size: 30
+        size: 26
     }
 }
