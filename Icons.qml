@@ -8,90 +8,90 @@ Item {
         id: turnLeft
         x: 200
         y: 40
-        source: "./icons/TurnLeft.png"
+        source: "qrc:/icons/TurnLeft.png"
         visible: true
     }
     Image {
         id: turnRight
         x: 250
         y: 40
-        source: "./icons/TurnRight.png"
+        source: "qrc:/icons/TurnRight.png"
         visible: true
     }
     Image {
         id: checkEngine
-        source: "./icons/CheckEngine.png"
+        source: "qrc:/icons/CheckEngine.png"
         visible: true
     }
     Image {
         id: batteryLow
         anchors.top: checkEngine.bottom
-        source: "./icons/Battery.png"
+        source: "qrc:/icons/Battery.png"
         visible: true
     }
     Image {
         id: absError
-        source: "./icons/ABS.png"
+        source: "qrc:/icons/ABS.png"
         anchors.top: batteryLow.bottom
         visible: true
     }
     Image {
         id: brakeWarning
-        source: "./icons/BrakeWarning.png"
+        source: "qrc:/icons/BrakeWarning.png"
         anchors.top: absError.bottom
         visible: true
     }
     Image {
         id: oilPressureLow
-        source: "./icons/OilPressureLow.png"
+        source: "qrc:/icons/OilPressureLow.png"
         anchors.top: brakeWarning.bottom
         visible: true
     }
     Image {
         id: doorAjar
-        source: "./icons/DoorAjar.png"
+        source: "qrc:/icons/DoorAjar.png"
         anchors.top: parent.top
         anchors.left: oilPressureLow.right
         visible: true
     }
     Image {
         id: trunkLidAjar
-        source: "./icons/TrunkLidAjar.png"
+        source: "qrc:/icons/TrunkLidAjar.png"
         anchors.top: doorAjar.bottom
         anchors.left: doorAjar.left
         visible: true
     }
     Image {
         id: seatBelt
-        source: "./icons/SeatBelt.png"
+        source: "qrc:/icons/SeatBelt.png"
         anchors.top: trunkLidAjar.bottom
         anchors.left: trunkLidAjar.left
         visible: true
     }
     Image {
         id: airBag
-        source: "./icons/AirBag.png"
+        source: "qrc:/icons/AirBag.png"
         anchors.top: seatBelt.bottom
         anchors.left: seatBelt.left
         visible: true
     }
     Image {
         id: highBeam
-        source: "./icons/HighBeam.png"
+        source: "qrc:/icons/HighBeam.png"
         anchors.top: airBag.bottom
         anchors.left: airBag.left
         visible: true
     }
     Image {
         id: immobilizer
-        source: "./icons/Immobilizer.png"
+        source: "qrc:/icons/Immobilizer.png"
         anchors.top: parent.top
         anchors.left: doorAjar.right
         visible: true
     }
     Image {
         id: frontFog
-        source: "./icons/FrontFog.png"
+        source: "qrc:/icons/FrontFog.png"
         anchors.top: immobilizer.bottom
         anchors.left: immobilizer.left
         visible: true

@@ -29,7 +29,7 @@ Item {
     // DashMask
     Image {
         id: dashMask
-        source: "./images/DashMask.png"
+        source: "qrc:/images/DashMask.png"
         anchors.centerIn: parent
     }
 
