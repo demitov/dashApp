@@ -2,55 +2,53 @@ import QtQuick 2.9
 
 Item {
     id: dash
-    width: 640
+    width: 1280
     height: 480
 
-    // Coolant temp
-    ProgressBar{
-        id: coolantTemp
-        x: 30
-        y: 90
-        visible: true
-        //
-        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
-        color: main.sourceData[5] >110 ? "red" : "white"
-    }
+//    // Coolant temp
+//    ProgressBar{
+//        id: coolantTemp
+//        x: 30
+//        y: 90
+//        visible: true
+//        //
+//        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
+//        color: main.sourceData[5] >110 ? "red" : "white"
+//    }
 
-    // Fuel level
-    ProgressBar{
-        id: fuelLevel
-        x: 540
-        y: 90
-        //
-        scale_value: 111
-        color: "white"
-    }
+//    // Fuel level
+//    ProgressBar{
+//        id: fuelLevel
+//        x: 540
+//        y: 90
+//        //
+//        scale_value: 111
+//        color: "white"
+//    }
 
-    // DashMask
-    Image {
-        id: dashMask
-        source: "qrc:/images/DashMask.png"
-        anchors.centerIn: parent
-    }
-
-//    DashMask {
+//    // DashMask
+//    Image {
+//        id: dashMask
+//        source: "qrc:/images/DashMask.png"
 //        anchors.centerIn: parent
 //    }
 
-    // Clock
-    Clock {
-        id: clock
-        anchors.left: parent.left
-        anchors.bottom: parent.bottom
-    }
+//    // Clock
+//    Clock {
+//        id: clock
+//        anchors.left: parent.left
+//        anchors.bottom: parent.bottom
+//    }
 
     // Voltmeter
     Inscription {
         id: voltmeter
-        anchors.left: parent.left
-        anchors.bottom: clock.top
+        x: 200
+        y: 430
         text: String(main.sourceData[3])
+        anchors.leftMargin: 214
         size: 20
+        z: 2
     }
 
     Tachometer {
@@ -64,7 +62,7 @@ Item {
         id: speedometer
         anchors.centerIn: parent
         text: String(main.sourceData[1])
-        size: 140
+        size: 100
     }
 
     // Odometer

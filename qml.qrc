@@ -21,8 +21,8 @@
         <file>icons/Immobilizer.png</file>
         <file>icons/FrontFog.png</file>
         <file>Clock.qml</file>
-        <file>DashMask.qml</file>
         <file>Dash.qml</file>
         <file>Inscription.qml</file>
+        <file>CooliantTemp.qml</file>
     </qresource>
 </RCC>

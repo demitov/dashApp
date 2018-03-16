@@ -1,19 +1,20 @@
-import QtQuick 2.9
+import QtQuick 2.10
 import QtQuick.Window 2.3
 
 import SerialPortLib 1.0
 
 Window {
     id: main
+
     visible: true
-//    visibility: Window.FullScreen
+    //    visibility: Window.FullScreen
     width: 1280
     height: 480
     color: "grey"
     title: qsTr("dashApp")
 
     property string serial_data : ""
-    property variant sourceData: [238,63,2123,13.7,15,90,175571,0,0,255]
+    property variant sourceData: [238,63,650,13.7,15,90,175571,0,0,255]
 
     //массив sourceData получаемый от Arduino
     /*
@@ -26,17 +27,19 @@ Window {
     ...
     */
 
-    Dash {
-        anchors.centerIn: parent
+    Loader {
+        id: loader
+
+        asynchronous: true
+        active: false
+        source: "qrc:/Dash.qml"
+
+        Image{
+            source: "qrc:/images/DashMask.png"
+            Component.onCompleted: loader.active = true
+        }
     }
 
-    Icons{
-        // in progress icons
-        anchors.left: parent.left
-        anchors.top: parent.top
-    }
-
-    // get the data from the serial port and put it into an array sourceData
     SerialPort {
         onSerial_data_Changed: {
             sourceData = "%1".arg(serial_data).split(',')
