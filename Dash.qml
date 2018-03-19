@@ -33,12 +33,6 @@ Item {
 //        anchors.centerIn: parent
 //    }
 
-//    // Clock
-//    Clock {
-//        id: clock
-//        anchors.left: parent.left
-//        anchors.bottom: parent.bottom
-//    }
 
     // Voltmeter
     Inscription {
@@ -72,5 +66,36 @@ Item {
         anchors.top: speedometer.bottom
         text: String(main.sourceData[6])
         size: 26
+    }
+
+    Row {
+        id: topIcons
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 15
+        spacing: 40
+
+        Image {
+            id: turnLeft
+            source: "qrc:/icons/TurnLeft.png"
+            visible: true
+        }
+
+        Image {
+            id: frontFog
+            source: "qrc:/icons/FrontFog.png"
+            visible: true
+        }
+
+        Image {
+            id: highBeam
+            source: "qrc:/icons/HighBeam.png"
+            visible: true
+        }
+
+        Image {
+            id: turnRight
+            source: "qrc:/icons/TurnRight.png"
+            visible: true
+        }
     }
 }

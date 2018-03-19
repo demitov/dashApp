@@ -20,7 +20,6 @@
         <file>Icons.qml</file>
         <file>icons/Immobilizer.png</file>
         <file>icons/FrontFog.png</file>
-        <file>Clock.qml</file>
         <file>Dash.qml</file>
         <file>Inscription.qml</file>
         <file>CooliantTemp.qml</file>
