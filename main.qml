@@ -1,4 +1,4 @@
-import QtQuick 2.10
+import QtQuick 2.9
 import QtQuick.Window 2.3
 
 import SerialPortLib 1.0
@@ -10,11 +10,14 @@ Window {
     //    visibility: Window.FullScreen
     width: 1280
     height: 480
-    color: "grey"
+    color: colorBackground
     title: qsTr("dashApp")
 
     property string serial_data : ""
-    property variant sourceData: [238,63,650,13.7,15,90,175571,0,0,255]
+    property variant sourceData: [238,63,4500,13.7,15,90,175571,0,0,255]
+
+    property string colorNeedle:        "red"
+    property string colorBackground:    "grey"
 
     //массив sourceData получаемый от Arduino
     /*
