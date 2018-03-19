@@ -4,6 +4,17 @@ Item {
     id: dash
     width: 1280
     height: 480
+    opacity: 0
+    Component.onCompleted: dashAnimation.running = true
+
+    OpacityAnimator {
+        id: dashAnimation
+        target: dash
+        from: 0
+        to: 1
+        duration: 1000
+        easing.type: Easing.InOutCirc
+    }
 
 //    // Coolant temp
 //    ProgressBar{

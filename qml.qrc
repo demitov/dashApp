@@ -23,5 +23,6 @@
         <file>Dash.qml</file>
         <file>Inscription.qml</file>
         <file>CooliantTemp.qml</file>
+        <file>images/TachoScales.png</file>
     </qresource>
 </RCC>

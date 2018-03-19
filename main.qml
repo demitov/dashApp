@@ -14,7 +14,7 @@ Window {
     title: qsTr("dashApp")
 
     property string serial_data : ""
-    property variant sourceData: [238,63,4500,13.7,15,90,175571,0,0,255]
+    property variant sourceData: [238,63,3123,13.7,15,90,175571,0,0,255]
 
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"

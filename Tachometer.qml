@@ -7,10 +7,15 @@ Item {
     height: 300
     anchors.centerIn: parent
 
+    Image {
+        id: tachoScales
+        anchors.centerIn: parent
+        source: "qrc:/images/TachoScales.png"
+    }
     Rectangle {
         id: needle
         width: 5
-        height: 130
+        height: 150
         color: main.colorNeedle
         x: (parent.width / 2) - 3
         y: parent.height / 2
