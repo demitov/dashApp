@@ -30,6 +30,27 @@ Window {
     ...
     */
 
+    // Coolant temp
+    ProgressBar{
+        id: coolantTemp
+        x: 323
+        y: 90
+        width: 70
+        visible: true
+
+        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
+        color: main.sourceData[5] >110 ? "red" : "white"
+    }
+
+    // Fuel level
+    ProgressBar{
+        id: fuelLevel
+        x: 887
+        y: 90
+        width: 70
+        scale_value: 111
+        color: "white"
+    }
     Loader {
         id: loader
 
@@ -38,6 +59,7 @@ Window {
         source: "qrc:/Dash.qml"
 
         Image{
+            id: dashMask
             source: "qrc:/images/DashMask.png"
             Component.onCompleted: loader.active = true
         }
