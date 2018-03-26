@@ -26,7 +26,6 @@ private:
     QSerialPort *arduino;
     static const quint16 arduino_uno_vendor_id = 0x2341;
     static const quint16 arduino_uno_product_id = 0x0001;
-
     QString mSerial_data;
 
     void openDefault();

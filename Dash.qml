@@ -16,6 +16,13 @@ Item {
         easing.type: Easing.InOutCirc
     }
 
+    // Icons
+    Icons {
+        anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
+
+    }
+
     // Voltmeter
     Inscription {
         id: voltmeter
