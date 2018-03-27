@@ -1,7 +1,7 @@
 import QtQuick 2.9
 import QtQuick.Window 2.3
 
-//import SerialPortLib 1.0
+import SerialPortLib 1.0
 
 Window {
     id: main
@@ -65,13 +65,13 @@ Window {
         }
     }
 
-    onSerial_dataChanged: {
-        sourceData = "%1".arg(serial_data).split(',')
+    SerialPort {
+        onSerial_data_Changed: {
+            sourceData = "%1".arg(serial_data).split(',')
+        }
     }
 
-//    SerialPort {
-//        onSerial_data_Changed: {
-//            sourceData = "%1".arg(serial_data).split(',')
-//        }
+//    onSerial_dataChanged: {
+//        sourceData = "%1".arg(serial_data).split(',')
 //    }
 }

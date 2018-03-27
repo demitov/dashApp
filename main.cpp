@@ -27,20 +27,20 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
-    //
-    // SerialPort to thread
-    //
-    QThread *thread = new QThread;
-    SerialPort *SerialPortNew = new SerialPort();
-    SerialPortNew->moveToThread(thread);
-    // соединяем слот и сигнал
-    QObject::connect(thread, SIGNAL(started()), SerialPortNew, SLOT(onReadData()));
-    thread->start();
-    //
+//    //
+//    // SerialPort to thread
+//    //
+//    QThread *thread = new QThread();
+//    SerialPort *SerialPortNew = new SerialPort();
+//    SerialPortNew->moveToThread(thread);
+//    // соединяем слот и сигнал
+//    QObject::connect(thread, SIGNAL(started()), SerialPortNew, SLOT(onReadData()));
+//    thread->start();
+//    //
 
     QQmlApplicationEngine engine;
 
-//    qmlRegisterType<SerialPort>("SerialPortLib", 1, 0, "SerialPort");
+    qmlRegisterType<SerialPort>("SerialPortLib", 1, 0, "SerialPort");
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
