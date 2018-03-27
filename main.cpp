@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QThread>
 
 // data from serial port get from here
 // https://github.com/eyllanesc/stackoverflow/tree/master/Arduino-QML
@@ -26,9 +27,20 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
+    //
+    // SerialPort to thread
+    //
+    QThread *thread = new QThread;
+    SerialPort *SerialPortNew = new SerialPort();
+    SerialPortNew->moveToThread(thread);
+    // соединяем слот и сигнал
+    QObject::connect(thread, SIGNAL(started()), SerialPortNew, SLOT(onReadData()));
+    thread->start();
+    //
+
     QQmlApplicationEngine engine;
 
-    qmlRegisterType<SerialPort>("SerialPortLib", 1, 0, "SerialPort");
+//    qmlRegisterType<SerialPort>("SerialPortLib", 1, 0, "SerialPort");
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
