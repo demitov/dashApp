@@ -7,7 +7,6 @@ Window {
     id: main
 
     visible: true
-    //    visibility: Window.FullScreen
     width: 1280
     height: 480
     color: colorBackground
@@ -37,7 +36,6 @@ Window {
         y: 90
         width: 70
         visible: true
-
         scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
         color: main.sourceData[5] >110 ? "red" : "white"
     }
@@ -53,7 +51,6 @@ Window {
     }
     Loader {
         id: loader
-
         asynchronous: true
         active: false
         source: "qrc:/Dash.qml"
@@ -70,8 +67,4 @@ Window {
             sourceData = "%1".arg(serial_data).split(',')
         }
     }
-
-//    onSerial_dataChanged: {
-//        sourceData = "%1".arg(serial_data).split(',')
-//    }
 }
