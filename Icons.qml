@@ -11,7 +11,7 @@ Item {
         anchors.topMargin: parent.height / 10
         anchors.horizontalCenter: parent.horizontalCenter
         source: "qrc:/icons/HighBeam.png"
-        visible: main.sourceData[18]
+        visible: Boolean(main.sourceData[18])
     }
 
     Row {
@@ -20,15 +20,15 @@ Item {
         spacing: 8
 
         Image {
-            id: checkEngine
-            source: "qrc:/icons/CheckEngine.png"
-            visible: main.sourceData[9]
+            id: oilPressureLow
+            source: "qrc:/icons/OilPressureLow.png"
+            visible: Boolean(main.sourceData[8])
         }
 
         Image {
-            id: oilPressureLow
-            source: "qrc:/icons/OilPressureLow.png"
-            visible: main.sourceData[8]
+            id: checkEngine
+            source: "qrc:/icons/CheckEngine.png"
+            visible: Boolean(main.sourceData[9])
         }
     }
 }
