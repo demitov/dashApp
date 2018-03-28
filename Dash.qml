@@ -16,6 +16,16 @@ Item {
         easing.type: Easing.InOutCirc
     }
 
+    // serial string
+    Inscription {
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 50
+        anchors.left: parent.left
+
+        text: String(main.serial_data)
+        size: 18
+    }
+
     //Icons
     Icons {
         anchors.fill: parent

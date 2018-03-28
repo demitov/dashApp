@@ -15,6 +15,8 @@ Window {
     property string serial_data : ""
 //    property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
     property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
+    //
+    property string debugSource: ""
 
     property int dashWidth: 1280
     property int dashHeight: 480
@@ -85,6 +87,7 @@ Window {
     SerialPort {
         onSerial_data_Changed: {
             sourceData = "%1".arg(serial_data).split(',')
+            debugSource = "%1".arg(serial_data)
         }
     }
 }
