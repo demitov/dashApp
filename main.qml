@@ -7,26 +7,46 @@ Window {
     id: main
 
     visible: true
-    width: 1280
-    height: 480
+    width: dashWidth
+    height: dashHeight
     color: colorBackground
     title: qsTr("dashApp")
 
     property string serial_data : ""
-    property variant sourceData: [238,0,0,0,0,0,0,0,0,255]
+//    property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
 
+    property int dashWidth: 1280
+    property int dashHeight: 480
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
 
     //массив sourceData получаемый от Arduino
     /*
+    === ДАТЧИКИ ===
     1   скорость
     2   обороты двигателя
     3   напряжение бортовой сети
     4   уровень топлива
     5   температура ОЖ
     6   показания одометра
-    ...
+    7   температура наружнего воздуха
+
+    === ЛАМПЫ ===
+    8   давление масла
+    9   check engine
+    10  зарядка аккумулятора
+    11  тормоза
+    12  ремень безопасности
+    13  ABS
+    14  иммобилайзер
+    15  открыта дверь
+    16  открыт багажник
+    17  левый поворотник
+    18  правый поворотник
+    19  дальний свет
+    20  AIR BAG
+    21  передние туманки
     */
 
     // Coolant temp

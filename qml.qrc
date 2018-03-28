@@ -22,5 +22,6 @@
         <file>icons/FrontFog.png</file>
         <file>Dash.qml</file>
         <file>Inscription.qml</file>
+        <file>IconsTemp.qml</file>
     </qresource>
 </RCC>

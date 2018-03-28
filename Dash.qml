@@ -16,21 +16,16 @@ Item {
         easing.type: Easing.InOutCirc
     }
 
-    // Icons
+    //Icons
     Icons {
+        anchors.fill: parent
+    }
+
+    // Icons temp
+    IconsTemp {
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
 
-    }
-
-    // Voltmeter
-    Inscription {
-        id: voltmeter
-        x: 200
-        y: 430
-        text: String(main.sourceData[3])
-        anchors.leftMargin: 214
-        size: 20
     }
 
     Tachometer {
@@ -44,16 +39,7 @@ Item {
         id: speedometer
         anchors.centerIn: parent
         text: String(main.sourceData[1])
-        size: 100
-    }
-
-    // Odometer
-    Inscription {
-        id: odometer
-        anchors.horizontalCenter: speedometer.horizontalCenter
-        anchors.top: speedometer.bottom
-        text: String(main.sourceData[6])
-        size: 26
+        size: 120
     }
 
     Row {
@@ -65,13 +51,62 @@ Item {
         Image {
             id: turnLeft
             source: "qrc:/icons/TurnLeft.png"
-            visible: true
+            visible: main.sourceData[17]
         }
 
         Image {
             id: turnRight
             source: "qrc:/icons/TurnRight.png"
-            visible: true
+            visible: main.sourceData[18]
+        }
+    }
+
+    Row {
+        id: bottomLeft
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
+        spacing: 48
+
+        // empty Item
+        Item {
+            width: 48
+            height: 48
+        }
+
+        // Voltmeter
+        Inscription {
+            id: voltmeter
+            text: String(main.sourceData[3]) + "V"
+            size: 20
+        }
+
+        // Outside Temp
+        Inscription {
+            id: outsideTemp
+            text: String(main.sourceData[7]) + "\xB0"
+            size: 20
+        }
+    }
+
+    Row {
+        id: bottomRight
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 5
+        spacing: 48
+
+        // Odometer
+        Inscription {
+            id: odometer
+            text: String(main.sourceData[6])
+            size: 20
+        }
+
+        // empty Item
+        Item {
+            width: 48
+            height: 48
         }
     }
 }
