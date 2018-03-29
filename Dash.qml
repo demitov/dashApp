@@ -16,16 +16,6 @@ Item {
         easing.type: Easing.InOutCirc
     }
 
-    // serial string
-    Inscription {
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 50
-        anchors.left: parent.left
-
-        text: String(main.serial_data)
-        size: 18
-    }
-
     //Icons
     Icons {
         anchors.fill: parent
@@ -56,7 +46,6 @@ Item {
         id: topIcons
         anchors.horizontalCenter: parent.horizontalCenter
         y: 5
-        spacing: 300
 
         Image {
             id: turnLeft
@@ -64,10 +53,15 @@ Item {
             visible: main.sourceData[17]
         }
 
+        Item {
+            width: 300
+            height: 48
+        }
+
         Image {
             id: turnRight
             source: "qrc:/icons/TurnRight.png"
-            visible: main.sourceData[18]
+            visible: Boolean(main.sourceData[18])
         }
     }
 

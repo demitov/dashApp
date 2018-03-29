@@ -7,19 +7,16 @@ Window {
     id: main
 
     visible: true
-    width: dashWidth
-    height: dashHeight
+    width: 1280
+    height: 480
     color: colorBackground
     title: qsTr("dashApp")
 
-    property string serial_data : ""
-//    property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
-    property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
-    //
-    property string debugSource: ""
+    property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+//                                                                       1 1 1 1 1 1 1 1 1 1 2 2 2
+//                                 0  1    2   3   4  5     6     7  8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
+//    property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
 
-    property int dashWidth: 1280
-    property int dashHeight: 480
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
 
@@ -87,7 +84,6 @@ Window {
     SerialPort {
         onSerial_data_Changed: {
             sourceData = "%1".arg(serial_data).split(',')
-            debugSource = "%1".arg(serial_data)
         }
     }
 }
