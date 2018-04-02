@@ -43,29 +43,6 @@ Item {
     }
 
     Row {
-        id: topIcons
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 5
-
-        Image {
-            id: turnLeft
-            source: "qrc:/icons/TurnLeft.png"
-            visible: main.sourceData[17]
-        }
-
-        Item {
-            width: 300
-            height: 48
-        }
-
-        Image {
-            id: turnRight
-            source: "qrc:/icons/TurnRight.png"
-            visible: Boolean(main.sourceData[18])
-        }
-    }
-
-    Row {
         id: bottomLeft
         anchors.left: parent.left
         anchors.bottom: parent.bottom

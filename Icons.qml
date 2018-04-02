@@ -5,6 +5,29 @@ Item {
     width: 1280
     height: 480
 
+    Row {
+        id: topIcons
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: 5
+
+        Image {
+            id: turnLeft
+            source: "qrc:/icons/TurnLeft.png"
+            visible: main.isVisible(main.sourceData[17])
+        }
+
+        Item {
+            width: 300
+            height: 48
+        }
+
+        Image {
+            id: turnRight
+            source: "qrc:/icons/TurnRight.png"
+            visible: main.isVisible(main.sourceData[18])
+        }
+    }
+
     Image {
         id: highBeam
         anchors.top: parent.top
