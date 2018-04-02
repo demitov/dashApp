@@ -22,7 +22,7 @@ Item {
         Image {
             id: oilPressureLow
             source: "qrc:/icons/OilPressureLow.png"
-            visible: main.sourceData[8] ? true : false
+            visible: main.sourceData[8].toInt()
         }
 
         Image {
