@@ -12,10 +12,10 @@ Window {
     color: colorBackground
     title: qsTr("dashApp")
 
-//    property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
+    property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 //                                                                       1 1 1 1 1 1 1 1 1 1 2 2 2
 //                                 0  1    2   3   4  5     6     7  8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
-    property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
+//    property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
 
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
