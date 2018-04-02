@@ -11,7 +11,7 @@ Item {
         anchors.topMargin: parent.height / 10
         anchors.horizontalCenter: parent.horizontalCenter
         source: "qrc:/icons/HighBeam.png"
-        visible: main.sourceData[19]
+        visible: isVisible(main.sourceData[19])
     }
 
     Row {
@@ -22,13 +22,17 @@ Item {
         Image {
             id: oilPressureLow
             source: "qrc:/icons/OilPressureLow.png"
-            visible: main.sourceData[8].toInt()
+            visible: isVisible(main.sourceData[8])
         }
 
         Image {
             id: checkEngine
             source: "qrc:/icons/CheckEngine.png"
-            visible: main.sourceData[9]
+            visible: isVisible(main.sourceData[9])
         }
+    }
+
+    function isVisible(value) {
+        return value > 0;
     }
 }
