@@ -5,28 +5,25 @@ Item {
     width: 1280
     height: 480
 
-    Row {
-        id: topIcons
+    Image {
+        id: turnLeft
+        anchors.top: parent.top
+        anchors.topMargin: 5
+        anchors.horizontalCenterOffset: -175
         anchors.horizontalCenter: parent.horizontalCenter
-        y: 5
-
-        Image {
-            id: turnLeft
-            source: "qrc:/icons/TurnLeft.png"
+        source: "qrc:/icons/TurnLeft.png"
             visible: main.isVisible(main.sourceData[10])
-        }
+    }
 
-        Item {
-            width: 300
-            height: 48
-        }
-
-        Image {
-            id: turnRight
-            source: "qrc:/icons/TurnRight.png"
+    Image {
+        id: turnRight
+        anchors.top: parent.top
+        anchors.topMargin: 5
+        anchors.horizontalCenterOffset: 175
+        anchors.horizontalCenter: parent.horizontalCenter
+        source: "qrc:/icons/TurnRight.png"
             visible: main.isVisible(main.sourceData[11])
         }
-    }
 
     Image {
         id: highBeam
