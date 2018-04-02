@@ -86,4 +86,8 @@ Window {
             sourceData = "%1".arg(serial_data).split(',')
         }
     }
+
+    function isVisible(value) {
+        return value > 0;
+    }
 }
