@@ -13,7 +13,7 @@ Item {
         Image {
             id: turnLeft
             source: "qrc:/icons/TurnLeft.png"
-            visible: main.isVisible(main.sourceData[17])
+            visible: main.isVisible(main.sourceData[10])
         }
 
         Item {
@@ -24,7 +24,7 @@ Item {
         Image {
             id: turnRight
             source: "qrc:/icons/TurnRight.png"
-            visible: main.isVisible(main.sourceData[18])
+            visible: main.isVisible(main.sourceData[11])
         }
     }
 
@@ -34,7 +34,7 @@ Item {
         anchors.topMargin: parent.height / 10
         anchors.horizontalCenter: parent.horizontalCenter
         source: "qrc:/icons/HighBeam.png"
-        visible: main.isVisible(main.sourceData[19])
+        visible: main.isVisible(main.sourceData[12])
     }
 
     Row {

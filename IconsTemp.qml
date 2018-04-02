@@ -9,7 +9,7 @@ Item {
         id: batteryLow
         anchors.top: parent.top
         source: "qrc:/icons/Battery.png"
-        visible: main.isVisible(main.sourceData[10])
+        visible: main.isVisible(main.sourceData[17])
     }
     Image {
         id: absError
@@ -21,7 +21,7 @@ Item {
         id: brakeWarning
         source: "qrc:/icons/BrakeWarning.png"
         anchors.top: absError.bottom
-        visible: main.isVisible(main.sourceData[11])
+        visible: main.isVisible(main.sourceData[18])
     }
     Image {
         id: doorAjar
@@ -42,7 +42,7 @@ Item {
         source: "qrc:/icons/SeatBelt.png"
         anchors.top: trunkLidAjar.bottom
         anchors.left: trunkLidAjar.left
-        visible: main.isVisible(main.sourceData[12])
+        visible: main.isVisible(main.sourceData[19])
     }
     Image {
         id: airBag
