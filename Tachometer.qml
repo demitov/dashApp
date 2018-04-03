@@ -19,19 +19,6 @@ Item {
             origin.x: 3
             origin.y: 0
         }
-        smooth: true
+        antialiasing: true
     }
-
-//    Image {
-//        id: needle
-//        source: "./images/Needle.png"
-//        x: (parent.width / 2) - 5
-//        y: parent.height / 2
-//        transform: Rotation {
-//            id: needleRotation
-//            origin.x: 5
-//            origin.y: 0
-//        }
-//        smooth: true
-//    }
 }
