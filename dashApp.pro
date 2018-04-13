@@ -1,6 +1,7 @@
 TEMPLATE = app
 
 QT +=   qml quick serialport
+QT -=   network
 
 CONFIG +=   c++11 qtquickcompiler
 
