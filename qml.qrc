@@ -8,7 +8,7 @@
         <file>icons/TurnRight.png</file>
         <file>icons/CheckEngine.png</file>
         <file>icons/Battery.png</file>
-        <file>ProgressBar.qml</file>
+        <file>CoolantTemp.qml</file>
         <file>icons/ABS.png</file>
         <file>icons/BrakeWarning.png</file>
         <file>icons/OilPressureLow.png</file>
@@ -23,5 +23,8 @@
         <file>Dash.qml</file>
         <file>Inscription.qml</file>
         <file>IconsTemp.qml</file>
+        <file>images/maskCoolantTemp.png</file>
+        <file>images/maskFuelLevel.png</file>
+        <file>FuelLevel.qml</file>
     </qresource>
 </RCC>

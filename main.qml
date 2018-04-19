@@ -15,7 +15,7 @@ Window {
     property variant sourceData: [238,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,255]
 //                                                                       1 1 1 1 1 1 1 1 1 1 2 2 2
 //                                 0  1    2   3   4  5     6     7  8 9 0 1 2 3 4 5 6 7 8 9 0 1 2
-//    property variant sourceData: [238,63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
+//    property variant sourceData: [238,63,2123,13.7,20,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,255]
 
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
@@ -48,26 +48,26 @@ Window {
     21  передние туманки
     */
 
-    // Coolant temp
-    ProgressBar{
-        id: coolantTemp
-        x: 323
-        y: 90
-        width: 70
-        visible: true
-        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
-        color: main.sourceData[5] >110 ? "red" : "white"
-    }
+//    // Coolant temp
+//    ProgressBar{
+//        id: coolantTemp
+//        x: 323
+//        y: 90
+//        width: 70
+//        visible: true
+//        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
+//        color: main.sourceData[5] >110 ? "red" : "white"
+//    }
 
-    // Fuel level
-    ProgressBar{
-        id: fuelLevel
-        x: 887
-        y: 90
-        width: 70
-        scale_value: 111
-        color: "white"
-    }
+//    // Fuel level
+//    ProgressBar{
+//        id: fuelLevel
+//        x: 887
+//        y: 90
+//        width: 70
+//        scale_value: 111
+//        color: "white"
+//    }
     Loader {
         id: loader
         asynchronous: true
