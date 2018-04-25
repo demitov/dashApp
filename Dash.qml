@@ -18,7 +18,7 @@ Item {
 
     // Coolant temp
     CoolantTemp {
-        x: 322
+        x: 321
         y: 90
         scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
         color: main.sourceData[5] >110 ? "red" : "white"
@@ -26,7 +26,7 @@ Item {
 
     //Fuel level
     FuelLevel {
-        x: 883
+        x: 884
         y: 90
         scale_value: main.sourceData[4]
         color: "white"

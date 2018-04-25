@@ -34,21 +34,19 @@ Item {
         visible: main.isVisible(main.sourceData[12])
     }
 
-    Row {
+    Image {
+        id: checkEngine
         anchors.top: highBeam.bottom
         anchors.horizontalCenter: highBeam.horizontalCenter
-        spacing: 8
+        source: "qrc:/icons/CheckEngine.png"
+        visible: main.isVisible(main.sourceData[9])
+    }
 
-        Image {
-            id: oilPressureLow
-            source: "qrc:/icons/OilPressureLow.png"
-            visible: main.isVisible(main.sourceData[8])
-        }
-
-        Image {
-            id: checkEngine
-            source: "qrc:/icons/CheckEngine.png"
-            visible: main.isVisible(main.sourceData[9])
-        }
+    Image {
+        id: oilPressureLow
+        x: 780
+        y: 330
+        source: "qrc:/icons/OilPressureLow.png"
+        visible: main.isVisible(main.sourceData[8])
     }
 }
