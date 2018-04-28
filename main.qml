@@ -48,26 +48,8 @@ Window {
     21  передние туманки
     */
 
-//    // Coolant temp
-//    ProgressBar{
-//        id: coolantTemp
-//        x: 323
-//        y: 90
-//        width: 70
-//        visible: true
-//        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
-//        color: main.sourceData[5] >110 ? "red" : "white"
-//    }
 
-//    // Fuel level
-//    ProgressBar{
-//        id: fuelLevel
-//        x: 887
-//        y: 90
-//        width: 70
-//        scale_value: 111
-//        color: "white"
-//    }
+    // загружать приборы только после того как загрузится маска панели
     Loader {
         id: loader
         asynchronous: true
@@ -87,6 +69,8 @@ Window {
         }
     }
 
+    // функция нужна для иконок
+    // без нее не воспринимает ноль как ЛОЖЬ
     function isVisible(value) {
         return value > 0;
     }

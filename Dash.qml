@@ -37,7 +37,7 @@ Item {
         anchors.fill: parent
     }
 
-    // Icons temp
+    // иконки размещение которых еще не выбрано
     IconsTemp {
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
