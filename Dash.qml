@@ -20,15 +20,15 @@ Item {
     CoolantTemp {
         x: 321
         y: 90
-        scale_value: main.sourceData[4] <= 50 ? 0 : (sourceData[4] - 50) * 1.9
-        color: main.sourceData[4] >110 ? "red" : "white"
+        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
+        color: main.sourceData[5] >110 ? "red" : "white"
     }
 
     //Fuel level
     FuelLevel {
         x: 884
         y: 90
-        scale_value: main.sourceData[3]
+        scale_value: main.sourceData[4]
         color: "white"
     }
 
@@ -74,14 +74,14 @@ Item {
         // Voltmeter
         Inscription {
             id: voltmeter
-            text: String(main.sourceData[2]) + "V"
+            text: String(main.sourceData[3]) + "V"
             size: 20
         }
 
         // Outside Temp
         Inscription {
             id: outsideTemp
-            text: String(main.sourceData[7]) + "\xB0"
+            text: String(main.sourceData[6]) + "\xB0"
             size: 20
         }
     }
@@ -96,7 +96,7 @@ Item {
         // Odometer
         Inscription {
             id: odometer
-            text: String(main.sourceData[5])
+            text: String(main.sourceData[2])
             size: 20
         }
 

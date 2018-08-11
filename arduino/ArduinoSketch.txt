@@ -1,30 +1,46 @@
-﻿//#include <EEPROM.h>
-//************************************************** ******************
-unsigned long micros_sp = 0, micros_th = 0;
-volatile int tz; 
-volatile int sz;
-volatile int sp; //импульсы спидометра
-volatile int th; //импульсы тахометра
-int analogInput [3] = {0,0,0}; //массив аналоговых значений
+﻿#include <EEPROM.h>
+//******************************************************************************************************
+volatile unsigned long micros_sp = 0;
+volatile byte          sz        = 0;              //счетчик обнуления
+volatile unsigned int  sp        = 0;              //скорость
+volatile boolean       st        = false;          //триггер 
+//******************************************************************************************************
+volatile unsigned long micros_th = 0;
+volatile byte          tz        = 0;              //счетчик обнуления
+volatile unsigned int  th        = 0;              //обороты
+volatile boolean       tt        = false;          //триггер 
+//******************************************************************************************************
+volatile unsigned long odometr   = 0;              //счетчик импульсов одометра
+//******************************************************************************************************
+         byte          sp_sens   = 6;              //количество имп./м датчика скорости
+         unsigned int  sp_mult   = 0;              //коэфф. пересчета частоты в скорость
+         unsigned int  od_mult   = 0;              //коэфф. пересчета импульсов в сотни метров
+//******************************************************************************************************
+int analogInput [4] = {0,0,0,0}; //массив аналоговых значений
 int digitalInput[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0}; //массив цифровых значений
 String resultString = ""; //строка
 int i; //счетчик циклов
-//************************************************** ******************
+//******************************************************************************************************
 
 void setup() {
   Serial.begin(115200);  
   attachInterrupt(0, speedometr, RISING); //прерывание спидометра по фронтам импульса
-  // SPEED  (M10-1 pin 4)
+                                          // SPEED  (M10-1 pin 4)
   attachInterrupt(1, tahometr, RISING);   //прерывание тахометра по фронтам импульса
-  // RPM    (M10-1 pin 7)
+                                          // RPM    (M10-1 pin 7)
+
+  odometr = EEPROM_ulong_read(0);         //чтение счетчика импульсов и EEPROM
+  sp_mult = 3600000 / sp_sens;            //вычисление коэфф. пересчета частоты в скорость
+  od_mult = sp_sens * 100;                //вычисление коэфф. пересчета импульсов в сотни метров
 }
-//************************************************** ******************
+//******************************************************************************************************
 
 void loop() {
   // считываем аналоговые сигналы
   analogInput[0]   =      analogRead(0);         // напряжение БС   (M10-1 pin 3)
   analogInput[1]   =      analogRead(1);         // уровень топлива (M10-3 pin 1,7)
   analogInput[2]   =      analogRead(2);         // температура ОЖ  (M10-3 pin 8)
+  analogInput[3]   =      analogRead(3);         // температура наружного воздуха
 
   //Считываем цифровые сигналы
   digitalInput[0] =       digitalRead(22);       //  OIL PRESSURE   (M10-1 pin 18)
@@ -43,10 +59,12 @@ void loop() {
 
   resultString = String(resultString + sp);
   resultString = String(resultString + ",");
-  resultString = String(resultString + th*10);
+  resultString = String(resultString + th);
+  resultString = String(resultString + ",");
+  resultString = String(resultString + odometr / od_mult);
   resultString = String(resultString + ",");
 
-  for(i=0; i<=2; i++) {   // аналоговые данные
+  for(i=0; i<=3; i++) {   // аналоговые данные
     resultString = String(resultString + analogInput[i]);
     resultString = String(resultString + ",");
   }
@@ -66,15 +84,32 @@ void loop() {
   delay(500);
 }
 
-//************************************************** ******************
-void speedometr(){ //измеряем частоту на входе спидометра по прерыванию
-sp=(900000.0/( micros() - micros_sp));
-micros_sp = micros();
-sz = 10;
+//******************************************************************************************************
+void speedometr(){                                  //измеряем частоту на входе спидометра по прерыванию
+  if(!st){micros_sp = micros();}
+  else   {sp = (sp_mult/(micros() - micros_sp));}
+  st = !st;
+  sz = 30;
+  odometr ++;
+ }
+//******************************************************************************************************
+void tahometr(){                                    //измеряем частоту на входе тахометра по прерыванию
+  if(!tt){micros_th = micros();}
+  else   {th = (30000000/(micros() - micros_th));}
+  tt = !tt;
+  tz = 10;
 }
-//************************************************** ******************
-void tahometr(){ //измеряем частоту на входе тахометра по прерыванию
-th=(2900000.0/( micros() - micros_th));
-micros_th = micros();
-tz = 10;
+// чтение двухбайтных переменных из EEPROM *************************************************************
+unsigned long EEPROM_ulong_read(int addr) {   
+  byte raw[4];
+  for(byte i = 0; i < 4; i++) raw[i] = EEPROM.read(addr+i);
+  unsigned long &num = (unsigned long&)raw;
+  return num;
 }
+// запись двухбайтных переменных в EEPROM **************************************************************
+void EEPROM_ulong_write(int addr, unsigned long num) {
+  byte raw[4];
+  (unsigned long&)raw = num;
+  for(byte i = 0; i < 4; i++) EEPROM.write(addr+i, raw[i]);
+}
+//******************************************************************************************************
