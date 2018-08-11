@@ -14,8 +14,6 @@ Window {
 
     property variant sourceData: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
-//    property variant sourceData: [63,2123,13.7,15,90,175571.3,23,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
 
@@ -45,7 +43,6 @@ Window {
     17  передние туманки
     18  AIR BAG
     */
-
 
     // загружать приборы только после того как загрузится маска панели
     Loader {
