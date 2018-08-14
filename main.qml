@@ -17,6 +17,9 @@ Window {
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
 
+    property int varSpeed: sourceData[0]
+    property int varTacho: sourceData[1]
+
     //массив sourceData получаемый от Arduino
     /*
     === ДАТЧИКИ ===
