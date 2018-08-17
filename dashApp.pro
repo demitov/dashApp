@@ -36,7 +36,6 @@ HEADERS += \
     serialport.h
 
 DISTFILES += \
-    arduino/ArduinoPins.txt \
     arduino/ArduinoSketch.txt \
     arduino/ArduinoPacketFormat.jpg \
     arduino/SchematicDiagramMega.pdf \

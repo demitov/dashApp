@@ -5,14 +5,14 @@ volatile int sz;
 volatile int sp; //импульсы спидометра
 volatile int th; //импульсы тахометра
 //массив аналоговых значений
-int analogInput [4] = {0,0,0,0};
+int analogInput [3] = {0,0,0};
 //массив цифровых значений
-int digitalInput[29] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+int digitalInput[14] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 String resultString = ""; //строка
 int i; //счетчик циклов
 //************************************************** ******************
 void setup() {
-  Serial.begin(115200);  
+  Serial.begin(115200);
   attachInterrupt(0, speedometr, RISING); //прерывание спидометра по фронтам импульса
                                           // SPEED  (M10-1 pin 4)
   attachInterrupt(1, tahometr, RISING);   //прерывание тахометра по фронтам импульса
@@ -25,7 +25,6 @@ void loop() {
   analogInput[0]   =      analogRead(0);         // напряжение БС   (M10-1 pin 3)
   analogInput[1]   =      analogRead(1);         // уровень топлива (M10-3 pin 1,7)
   analogInput[2]   =      analogRead(2);         // температура ОЖ  (M10-3 pin 8)
-  analogInput[3]   =      analogRead(3);         // температура наружного воздуха
 
   //Считываем цифровые сигналы
   digitalInput[0] =       digitalRead(22);       //  OIL PRESSURE   (M10-1 pin 18)
@@ -41,23 +40,24 @@ void loop() {
   digitalInput[10] =      digitalRead(42);       //  HIGH BEAM      (M10-2 pin 9,10)
   digitalInput[11] =      digitalRead(44);       //  FRONT FOG      (M10-2 pin 12)
   digitalInput[12] =      digitalRead(46);       //  AIR BAG        (M10-2 pin 7,8)
+  digitalInput[13] =      digitalRead(48);       //  SEAT BELT      (M10-1 pin 14)
 
   resultString = String(resultString + sp);
   resultString = String(resultString + ",");
   resultString = String(resultString + th);
   resultString = String(resultString + ",");
 
-  for(i=0; i<=3; i++) {   // аналоговые данные
+  for(i=0; i<=2; i++) {   // аналоговые данные
     resultString = String(resultString + analogInput[i]);
     resultString = String(resultString + ",");
   }
 
-  for(i=0; i<=12; i++) {  // цифровые данные
+  for(i=0; i<=13; i++) {  // цифровые данные
     resultString = String(resultString  + digitalInput[i]);
-    if (i!=12) resultString = String(resultString + ",");
+    if (i!=13) resultString = String(resultString + ",");
   }
   resultString = String(resultString + "\n");
-  
+
   Serial.print (resultString);
   resultString =  String("");
   tz = tz - 1;

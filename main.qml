@@ -12,13 +12,32 @@ Window {
     color: colorBackground
     title: qsTr("dashApp")
 
-    property variant sourceData: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    property variant sourceData: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
     property string colorNeedle:        "red"
     property string colorBackground:    "grey"
 
-    property int varSpeed: sourceData[0]
-    property int varTacho: sourceData[1]
+    property int    varSpeed:       sourceData[0]
+    property int    varTacho:       sourceData[1]
+    property real   varOdometr: 0//    sourceData[2]
+    property real   varVoltage:     sourceData[2]
+    property int    varFuel:        sourceData[3]
+    property int    varCooliant:    sourceData[4]
+    property real   varOutsideTemp: 0 //sourceData[6]
+    property int    varOilPressure: sourceData[5]
+    property int    varCheckEngine: sourceData[6]
+    property int    varBatteryLow:  sourceData[7]
+    property int    varBrakeWarn:   sourceData[8]
+    property int    varABS:         sourceData[9]
+    property int    varImmobilizer: sourceData[10]
+    property int    varDoorAjar:    sourceData[11]
+    property int    varTrunkLid:    sourceData[12]
+    property int    varTurnLeft:    sourceData[13]
+    property int    varTurnRight:   sourceData[14]
+    property int    varHighBeam:    sourceData[15]
+    property int    varFrontFog:    sourceData[16]
+    property int    varAirBag:      sourceData[17]
+    property int    varSeatBelt:    sourceData[18]
 
     //массив sourceData получаемый от Arduino
     /*

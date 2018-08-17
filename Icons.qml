@@ -12,7 +12,7 @@ Item {
         anchors.horizontalCenterOffset: -175
         anchors.horizontalCenter: parent.horizontalCenter
         source: "qrc:/icons/TurnLeft.png"
-            visible: main.isVisible(main.sourceData[15])
+            visible: main.isVisible(main.varTurnLeft)
     }
 
     Image {
@@ -22,7 +22,7 @@ Item {
         anchors.horizontalCenterOffset: 175
         anchors.horizontalCenter: parent.horizontalCenter
         source: "qrc:/icons/TurnRight.png"
-            visible: main.isVisible(main.sourceData[16])
+            visible: main.isVisible(main.varTurnRight)
         }
 
     Image {
@@ -31,7 +31,7 @@ Item {
         anchors.topMargin: parent.height / 10
         anchors.horizontalCenter: parent.horizontalCenter
         source: "qrc:/icons/HighBeam.png"
-        visible: main.isVisible(main.sourceData[17])
+        visible: main.isVisible(main.varHighBeam)
     }
 
     Image {
@@ -39,7 +39,7 @@ Item {
         anchors.top: highBeam.bottom
         anchors.horizontalCenter: highBeam.horizontalCenter
         source: "qrc:/icons/CheckEngine.png"
-        visible: main.isVisible(main.sourceData[8])
+        visible: main.isVisible(main.varCheckEngine)
     }
 
     Image {
@@ -47,6 +47,6 @@ Item {
         x: 780
         y: 330
         source: "qrc:/icons/OilPressureLow.png"
-        visible: main.isVisible(main.sourceData[7])
+        visible: main.isVisible(main.varOilPressure)
     }
 }

@@ -20,15 +20,15 @@ Item {
     CoolantTemp {
         x: 321
         y: 90
-        scale_value: main.sourceData[5] <= 50 ? 0 : (sourceData[5] - 50) * 1.9
-        color: main.sourceData[5] >110 ? "red" : "white"
+        scale_value: main.varCooliant <= 50 ? 0 : (varCooliant - 50) * 1.9
+        color: main.varCooliant >110 ? "red" : "white"
     }
 
     //Fuel level
     FuelLevel {
         x: 884
         y: 90
-        scale_value: main.sourceData[4]
+        scale_value: main.varFuel
         color: "white"
     }
 
@@ -47,14 +47,14 @@ Item {
     Tachometer {
         id: tachometer
         anchors.centerIn: parent
-        rpm: main.sourceData[1] * 0.04
+        rpm: main.varTacho * 0.04
     }
 
     // Speedometer
     Inscription {
         id: speedometer
         anchors.centerIn: parent
-        text: String(main.sourceData[0])
+        text: String(main.varSpeed)
         size: 120
     }
 
@@ -74,14 +74,14 @@ Item {
         // Voltmeter
         Inscription {
             id: voltmeter
-            text: String(main.sourceData[3]) + "V"
+            text: String(main.varVoltage) + "V"
             size: 20
         }
 
         // Outside Temp
         Inscription {
             id: outsideTemp
-            text: String(main.sourceData[6]) + "\xB0"
+            text: String(main.varOutsideTemp) + "\xB0"
             size: 20
         }
     }
