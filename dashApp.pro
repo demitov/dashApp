@@ -37,6 +37,5 @@ HEADERS += \
 
 DISTFILES += \
     arduino/ArduinoSketch.txt \
-    arduino/ArduinoPacketFormat.jpg \
     arduino/SchematicDiagramMega.pdf \
     arduino/sensors.txt
