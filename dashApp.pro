@@ -4,8 +4,8 @@ QT -=   network
 CONFIG +=   c++11 \
             qtquickcompiler
 
-SOURCES += main.cpp \
-    serialport.cpp
+SOURCES +=  main.cpp \
+            serialport.cpp
 
 RESOURCES += qml.qrc
 
