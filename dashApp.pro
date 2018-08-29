@@ -1,9 +1,8 @@
-TEMPLATE = app
-
 QT +=   qml quick serialport
 QT -=   network
 
-CONFIG +=   c++11 qtquickcompiler
+CONFIG +=   c++11 \
+            qtquickcompiler
 
 SOURCES += main.cpp \
     serialport.cpp
