@@ -31,8 +31,8 @@ void SerialPort::onReadData()
 
 void SerialPort::openDefault()
 {
-//    arduino->setPortName("ttyAMA0");
-    arduino->setPortName("COM3");
+    arduino->setPortName("ttyAMA0");
+//    arduino->setPortName("COM3");
     arduino->setBaudRate(QSerialPort::Baud115200);
     arduino->setDataBits(QSerialPort::Data8);
     arduino->setParity(QSerialPort::NoParity);
