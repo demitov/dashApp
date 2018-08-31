@@ -26,5 +26,6 @@
         <file>images/maskCoolantTemp.png</file>
         <file>images/maskFuelLevel.png</file>
         <file>FuelLevel.qml</file>
+        <file>UbuntuFont.ttf</file>
     </qresource>
 </RCC>

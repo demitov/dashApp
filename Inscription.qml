@@ -8,10 +8,16 @@ Item {
     width: inscriptionText.width
     height: inscriptionText.height
 
+    FontLoader {
+        id: ubuntuFont
+        name: "UbuntuFont"
+        source: "qrc:/UbuntuFont.ttf"
+    }
+
     Text {
         id: inscriptionText
         font.bold: true
-        font.family: "Eurostyle"
+        font.family: ubuntuFont.name
         color: "white"
         anchors.centerIn: parent
     }
@@ -20,7 +26,7 @@ Item {
         id: dropShadow
         anchors.fill: inscriptionText
         horizontalOffset: 2
-        verticalOffset: 5
+        verticalOffset: 4
         radius: 6
         samples: 16
         color: "grey"
