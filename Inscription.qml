@@ -17,7 +17,7 @@ Item {
     Text {
         id: inscriptionText
         font.bold: true
-        font.family: ubuntuFont.name
+//        font.family: ubuntuFont.name
         color: "white"
         anchors.centerIn: parent
     }
