@@ -8,9 +8,15 @@ Item {
     width: inscriptionText.width
     height: inscriptionText.height
 
+    FontLoader {
+        id: fontUbuntu
+        name: "Ubuntu"
+        source: "qrc:/UbuntuFont.ttf"
+    }
+
     Text {
         id: inscriptionText
-        font.bold: true
+        font.family: fontUbuntu.name
         color: "white"
         anchors.centerIn: parent
     }
