@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Tachometer.qml</file>
-        <file>images/Needle.png</file>
         <file>images/DashMask.png</file>
         <file>icons/TurnLeft.png</file>
         <file>icons/TurnRight.png</file>
@@ -26,6 +25,5 @@
         <file>images/maskCoolantTemp.png</file>
         <file>images/maskFuelLevel.png</file>
         <file>FuelLevel.qml</file>
-        <file>UbuntuFont.ttf</file>
     </qresource>
 </RCC>

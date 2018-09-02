@@ -1,5 +1,5 @@
 #include "serialport.h"
-#include <QDebug>
+//#include <QDebug>
 
 SerialPort::SerialPort(QObject *parent):QObject(parent)
 {
@@ -23,7 +23,7 @@ void SerialPort::onReadData()
 {
     if (arduino->canReadLine()) {
         QByteArray data = arduino->readLine();
-        qDebug()<<QString(data).trimmed();
+//        qDebug()<<QString(data).trimmed();
         QString value = QString(data).trimmed();
         set_serial_data(value);
     }
@@ -39,10 +39,10 @@ void SerialPort::openDefault()
     arduino->setStopBits(QSerialPort::OneStop);
     arduino->setFlowControl(QSerialPort::NoFlowControl);
 
-    if (arduino->open(QSerialPort::ReadWrite))
-        qDebug()<<"Connected to "<< arduino->portName();
-    else
-        qCritical()<<"Serial Port error: " << arduino->errorString();
+//    if (arduino->open(QSerialPort::ReadWrite))
+//        qDebug()<<"Connected to "<< arduino->portName();
+//    else
+//        qCritical()<<"Serial Port error: " << arduino->errorString();
 
 }
 
