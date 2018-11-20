@@ -18,10 +18,19 @@ Item {
 
     // Coolant temp
     CoolantTemp {
+        id: coolantTempBar
         x: 321
         y: 90
         scale_value: main.varCooliant <= 50 ? 0 : (varCooliant - 50) * 1.9
         color: main.varCooliant >110 ? "red" : "white"
+
+        Inscription {
+            anchors.left: parent.right
+            anchors.leftMargin: -10
+            anchors.top: parent.top
+            text: String(main.varCooliant) + "\xB0"
+            size: 28
+        }
     }
 
     //Fuel level
@@ -30,6 +39,14 @@ Item {
         y: 90
         scale_value: main.varFuel
         color: "white"
+
+        Inscription {
+            anchors.right: parent.left
+            anchors.rightMargin: -10
+            anchors.top: parent.top
+            text: String(main.varFuel) + " l"
+            size: 28
+        }
     }
 
     //Icons
