@@ -21,7 +21,8 @@ void SerialPort::set_serial_data(QString newValue)
 
 void SerialPort::onReadData()
 {
-    if (arduino->canReadLine()) {
+    // IMPORTANT: That's a *while*, not an *if*!
+    while (arduino->canReadLine()) {
         QByteArray data = arduino->readLine();
 //        qDebug()<<QString(data).trimmed();
         QString value = QString(data).trimmed();
